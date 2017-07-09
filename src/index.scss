@@ -1,0 +1,110 @@
+@import 'styles/_variables.overrides';
+@import 'styles/_reset';
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+
+
+// Debugging
+// * {
+//   background-color: rgba(0,0,0, 0.1);
+// }
+
+// Additional variables
+$active-link: rgba(61, 61, 261, 1);
+
+#site-container {
+  position:relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+// Style navbar
+
+#navbar {
+  border: 0;
+}
+
+#navbar {
+  .navbar__menu > ul > li.active {
+    background-color: $active-link;
+  }
+  li.active {
+  }
+  .navbar__menu li {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
+  }
+}
+
+#footer {
+  height: auto;
+  color: $custom-footer-color;
+  text-align: center;
+
+  .footer-container {
+    background-color: $footer-bg-color;
+    height: $footer-height;
+    min-height: $footer-min-height;
+    width: $footer-width;
+    padding: 0;
+    margin: 0;
+  }
+  .section-social {
+    ul {
+      text-align: center;
+      font-size: 1.3em;
+      li {
+        display: inline;
+      }
+      li.icon-facebook:hover {
+        color: #3b5998;
+      }
+      li.icon-youtube:hover {
+        color: #cd201f;
+      }
+      li.icon-twitter:hover {
+        color: #1da1f2;
+      }
+      li.icon-instagram:hover {
+        color: #405de6;
+      }
+      li.icon-github:hover {
+        color: #6e5494;
+      }
+    }
+  }
+
+  .section-contact {
+    p {
+      font-size: 0.7em;
+    }
+  }
+
+  h4 {
+    text-align: center;
+    width: 100%;
+    font-size: $custom-footer-header-size;
+  }
+}
+
+#content {
+  min-height: calc(100vh - #{$footer-min-height} - #{$navbar-height});
+
+  .movie-poster {
+    background-repeat: no-repeat;
+    background-size: contain !important;
+    height: 250px;
+    width: 175px;
+  }
+}
