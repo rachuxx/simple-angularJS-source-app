@@ -3,8 +3,8 @@
   <div ng-repeat="movie in main.movies" class="row">
     <div class="col-sm-offset-1 col-sm-3 col-xs-offset-1 col-xs-4 movie-poster" style="background: url({{movie.image}})"></div>
     <div class="col-sm-offset-1 col-sm-6 col-xs-offset-1 col-xs-5 movie-details">
-      <h3>{{movie.title}}</h3>
-      <p>{{movie.description}}</p>
+      <h3 ng-bind="movie.title"></h3>
+      <p ng-bind="movie.description"></p>
     </div>
   </div>
 </div>

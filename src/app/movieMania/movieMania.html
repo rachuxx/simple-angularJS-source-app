@@ -1,7 +1,12 @@
 <div id="site-container">
   <navbar></navbar>
   <div class="clearfix"></div>
-  <div id="content" class="container-fluid" ui-view></div>
-  <div class="clearfix"></div>
+  <div class="row">
+    <div id="content" class="container-fluid col-xs-12 col-sm-10" ui-view></div>
+    <div id="sidebar" class="hidden-xs col-sm-2">
+      <sidebar></sidebar>
+    </div>
+    <div class="clearfix"></div>
+  </div>
   <footerbar></footerbar>
 </div>

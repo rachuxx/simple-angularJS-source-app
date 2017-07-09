@@ -10,7 +10,11 @@ gulp.task('inject', inject);
 
 function inject() {
   const injectScripts = gulp.src([
-    conf.path.tmp('**/*.js'),
+    conf.path.tmp('*.js'),
+    conf.path.tmp('/app/**/*.directive.js'),
+    conf.path.tmp('/app/**/*.controller.js'),
+    conf.path.tmp('/app/**/*.module.js'),
+    conf.path.tmp('/app/**/*.js'),
     `!${conf.path.tmp('**/*.spec.js')}`
   ])
   .pipe(angularFilesort()).on('error', conf.errorHandler('AngularFilesort'));
